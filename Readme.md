@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Оля Левинсон](https://up.htmlacademy.ru/htmlcss/39/user/2486259).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская] (https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
