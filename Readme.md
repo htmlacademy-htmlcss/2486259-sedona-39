@@ -2,7 +2,7 @@
 
 * Студент: [Оля Левинсон](https://up.htmlacademy.ru/htmlcss/39/user/2486259).
 * Наставник: [Ирина Малиновская] (https://htmlacademy.ru/profile/irina-malinovskaya).
-
+* Проект: [Седона] (https://olgalevinson.github.io/2486259-sedona-39/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
