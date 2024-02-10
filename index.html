@@ -8,9 +8,8 @@
 
   <body>
     <header class="page-header">
-      <a class="visually-hidden" href="brand=sedona.svg">
-        <img class="logo" src="#" alt="Логотип города Седона">
-        <!--сделать href ссылку на главную страницу + aria-current="page" -->
+      <a class="visually-hidden" aria-current="page" href="index.html">
+        <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
       </a>
       <nav>
         <ul class="navigation-list">
@@ -26,19 +25,25 @@
       </nav>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="search.svg">
+          <a class="navigation-link" href="#">
             <span class="visually-hidden">
               Поиск
             </span>
           </a>
+          <img class="nav" src="images/search.svg" width="20" height="20"> <!--правильно ли вложен отдельно?
+            или нужно:
+            <a class="navigation-link" href="#">
+            <img class="nav" src="images/search.svg" width="20" height="20" alt="Поиск">
+            </a>
+            -->
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="heart.svg">
+          <a class="navigation-link" href="#">
             <span class="visually-hidden">
-              Избранное
+              Отели в избранном 12
             </span>
-            <!-- добавить цифру 12 и написать отели в избранном: ‹span class="visually-hidden"> Избранное </span>-->
           </a>
+          <img class="nav" src="images/like.svg" width="20" height="20"> <!--как сделать чтобы было like12? -->
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Хочу сюда!</a>
@@ -47,20 +52,18 @@
     </header>
     <main class="main-index">
       <h1 class="visually-hidden">О городе Седона</h1>
-      <!--добавить фото img class="hero-image" src="images/hero-image.svg" width="458" heigh="352" alt="текст с картинки написать"-->
-      <section class="hero">
-        <h2 class="visually-hidden"> Седона</h2>
-        <img class="main" src="welcome.svg" alt="Добро пожаловать в Седону">
-
-
+      <img class="hero-image" src="images/hero-image.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona">
+      <section>
+        <h2 class="visually-hidden">Преимущества</h2>
+        <p> Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <section class="advantages">
-          <h2 class="visually-hidden">Преимущества</h2>
-          <!-- текст про седону в p добавить-->
           <ul class="advantages-list">
             <li class="advantages-item">
               <h3 class="advantages-title photo-item">Настоящий городок</h3>
               <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              <img class="advantages-photo-item" src="Restorant.svg" alt="Ресторан в Седоне">
+              <img class="advantages-photo-item" src="images/restorant.jpg" width="800" height="385"
+                alt="Ресторан в Седоне">
             </li>
             <li class="advantages-item">
               <h3 class="advantages-title">Небольшая площадь</h3>
@@ -77,7 +80,7 @@
             <li class="advantages-item">
               <h3 class="advantages-title photo-item">Там есть мост дьявола</h3>
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              <img class="advantages-photo-item" src="Mountains.svg" alt="Горы в Седоне">
+              <img class="advantages-photo-item" src="images/mountain.jpg" width="800" height="385" alt="Горы в Седоне">
             </li>
           </ul>
         </section>
@@ -111,7 +114,7 @@
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <!--<label class="visually-hidden" for="subscription-email">Укажите ваш email</label>-->
+            <label class="visually-hidden" for="subscription-email">Укажите ваш email</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscriber-email" id="subscription-email"
               required>
             <button class="button subscription-button" type="submit">Подписаться</button>
@@ -120,28 +123,37 @@
     </main>
     <footer class="page-footer">
       <h2 class="visually-hidden">Контакты</h2>
-      <ul class="footer-social-list"> <!-- не делать привязку к футеру, чтобы потом можно было перенести в др. место-->
-        <li class="footer-social-item">
+      <ul class="social-list">
+        <li class="social-item">
           <a class="button" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
+            <span class="visually-hidden">Вконтакте</span> </a>
+          <img class="social" src="images/vk.svg" width="47.33" height="40" alt=""> <!-- нужно ли ставить что то в альт, если в спане уже есть название;
+              не нужно ли сделать так:
+              <a class="button" href="https://vk.com/htmlacademy">
+              <img class="social" src="images/vk.svg" width="24" height="14" alt="Вконтакте">
+              </a>  -->
+
         </li>
-        <li class="footer-social-item">
+        <li class="social-item">
           <a class="button" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграм</span>
-          </a>
+            <span class="visually-hidden">Телеграм</span> </a>
+          <img class="social" src="images/telegram.svg" width="47.33" height="40" alt="">
         </li>
-        <li class="footer-social-item">
+        <li class="social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Ютуб</span>
           </a>
+          <img class="social" src="images/youtube.svg" width="47.33" height="40" alt="">
+
         </li>
       </ul>
-      <address class="footer-phone">
-        <a class="footer-contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+      <address class="phone">
+        <a class="contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
       </address>
-      <a class="htmlacademy-link" href="Logoacademy.svg">.htmlacademy</a>
-      <!--img class= academy logo src= w h alt="Логотип html "-->
+      <a class="htmlacademy-link visually-hidden" href="http://htmlacademy.ru">.htmlacademy
+      </a>
+      <img class="academy-logo" src="images/Logohtml.svg" width="114.9" height="32.9" alt="Логотип html Академии">
+
 
     </footer>
 
