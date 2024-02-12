@@ -9,7 +9,7 @@
   <body>
     <header class="page-header">
       <a class="visually-hidden" aria-current="page" href="index.html">
-        <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+        <img class="logo" src="images/logo.svg" width="140" height="70" alt="логотип города Седона">
       </a>
       <nav>
         <ul class="navigation-list">
@@ -20,7 +20,7 @@
             <a class="navigation-link" href="about.html">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </ul>
       </nav>
       <ul class="navigation-list navigation-user">
@@ -29,21 +29,17 @@
             <span class="visually-hidden">
               Поиск
             </span>
+            <img class="icon-search" src="images/search.svg" width="20" height="20" alt="иконка лупы">
           </a>
-          <img class="nav" src="images/search.svg" width="20" height="20"> <!--правильно ли вложен отдельно?
-            или нужно:
-            <a class="navigation-link" href="#">
-            <img class="nav" src="images/search.svg" width="20" height="20" alt="Поиск">
-            </a>
-            -->
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden">
-              Отели в избранном 12
+              Отели в избранном
             </span>
+            <span>12</span>
+            <img class="icon-likes" src="images/like.svg" width="20" height="20" alt="иконка сердца">
           </a>
-          <img class="nav" src="images/like.svg" width="20" height="20"> <!--как сделать чтобы было like12? -->
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Хочу сюда!</a>
@@ -56,9 +52,11 @@
       <header class="inner-header">
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
-            <img class="breadcrumbs" src="images/bread-home.svg" alt="">
-            <!-- вставить дом и стрелочку  или это декор?-->
+            <a class="breadcrumbs-link visually-hidden" href="index.html">
+              <span class="visually-hidden">Главная</span>
+              <img class="breadcrumbs" src="images/bread-home.svg" width="20" height="20" alt="иконка дома">
+            </a>
+
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
@@ -76,11 +74,7 @@
                   <input class="control-input" type="checkbox" name="pool" checked>
 
                   Бассейн
-                </label> <!-- в примере вот такой вариант, разобраться, мой вариант не ошибка <label class="controls" for="pool"›
-                < input class="control-jnput" type="checkbox"
-                name="pool" id="pool" checked› == $0
-                " Бассейн "
-                </label >-->
+                </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
@@ -155,34 +149,33 @@
           <p class="options-search">
             <a href="#" class="button button-light">
               <span class="visually-hidden">Показать карточки</span>
-              <img class="icon" src="images/view1.svg" width="16" height="14" alt="">
+              <img class="icon" src="images/view1.svg" width="16" height="14" alt="иконка карточек">
             </a>
             <a class="button button-whole" href="#">
               <span class="visually-hidden">Показать на весь экран</span>
-              <img class="icon" src="images/view2.svg" width="16" height="14" alt="">
+              <img class="icon" src="images/view2.svg" width="16" height="14" alt="иконка экрана">
             </a>
             <a class="button button-list" href="#">
               <span class="visually-hidden">Показать список</span>
-              <img class="icon" src="images/view3.svg" width="16" height="14" alt="">
+              <img class="icon" src="images/view3.svg" width="16" height="14" alt="иконка списка">
             </a>
           </p>
         </div>
 
         <ul class="hotels-list">
           <li class="hotel-card">
-            <a class="hotel-card-link" href="#"> <!--”tabindex="-1" от лишних табов-->
+            <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-1.jpg" width="300" height="212"
                 alt="Звездное небо сквозь горы"> </a>
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-            <a class="hotel-card-title" href="#"></a> <!--уместно ли делать также ссылкой ссылкой Amara Resort & Spa-->
+            <a class="hotel-card-title" href="#"></a>
 
             <span class="hotel-card-type">Гостиница</span>
             <b class="hotel-card-price"> от 4000 ₽</b>
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
             <span class="hotel-stars four visually-hidden">4 звезды</span>
-            <img class="hotel-stars stars" src="images/stars.svg" width="18" height="17"
-              alt=""><!-- как сделать чтобы картинка звезды повторялась или нужно выгружать отдельно сразу 4 звезды?-->
+            <img class="hotel-stars 4stars" src="images/stars4.svg" width="72" height="68" alt="четыре звезды">
             <p class="hotel-card-rating"><a href="#">Рейтинг: 8,5</a></p>
           </li>
           <li class="hotel-card">
@@ -196,12 +189,13 @@
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранном</button>
             <span class="hotel-stars four visually-hidden">4 звезды</span>
+            <img class="hotel-stars 4stars" src="images/stars4.svg" width="72" height="68" alt="четыре звезды">
             <p class="hotel-card-rating"><a href="#">Рейтинг: 9,2</a></p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-3.jpg" width="300" height="212"
-                alt="Рельефная гора в солнечный день">
+                alt="рельефная гора в солнечный день">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
             <span class="hotel-card-type">Гостиница</span>
@@ -209,6 +203,7 @@
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
             <span class="hotel-stars three visually-hidden">3 звезды</span>
+            <img class="hotel-stars 3stars" src="images/stars3.svg" width="54" height="51" alt="три звезды">
             <p class="hotel-card-rating"><a href="#">Рейтинг: 6,9</a></p>
           </li>
           <li class="hotel-card">
@@ -222,6 +217,7 @@
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
             <span class="hotel-stars two visually-hidden">2 звезды</span>
+            <img class="hotel-stars 2stars" src="images/stars2.svg" width="36" height="34" alt="две звезды">
             <p class="hotel-card-rating"><a href="#">Рейтинг: 5,0</a></p>
           </li>
         </ul>
@@ -269,24 +265,22 @@
       <ul class="social-list">
         <li class="social-item">
           <a class="button" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Вконтакте</span> </a>
-          <img class="social" src="images/vk.svg" width="47.33" height="40" alt=""> <!-- нужно ли ставить что то в альт, если в спане уже есть название;
-              не нужно ли сделать так:
-              <a class="button" href="https://vk.com/htmlacademy">
-              <img class="social" src="images/vk.svg" width="24" height="14" alt="Вконтакте">
-              </a>  -->
+            <span class="visually-hidden">Вконтакте</span>
+            <img class="social" src="images/vk.svg" width="47.33" height="40" alt="иконка vk">
+          </a>
 
         </li>
         <li class="social-item">
           <a class="button" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграм</span> </a>
-          <img class="social" src="images/telegram.svg" width="47.33" height="40" alt="">
+            <span class="visually-hidden">Телеграм</span>
+            <img class="social" src="images/telegram.svg" width="47.33" height="40" alt="иконка telegram">
+          </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Ютуб</span>
+            <img class="social" src="images/youtube.svg" width="47.33" height="40" alt="иконка youtube">
           </a>
-          <img class="social" src="images/youtube.svg" width="47.33" height="40" alt="">
 
         </li>
       </ul>
@@ -294,11 +288,12 @@
         <a class="contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
       </address>
       <a class="htmlacademy-link visually-hidden" href="http://htmlacademy.ru">.htmlacademy
+        <img class="academy-logo" src="images/logo-html.svg" width="114.9" height="32.9" alt="логотип html Академии">
       </a>
-      <img class="academy-logo" src="images/Logohtml.svg" width="114.9" height="32.9" alt="Логотип html Академии">
 
 
     </footer>
+
 
   </body>
 
