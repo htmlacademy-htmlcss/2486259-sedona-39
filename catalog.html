@@ -8,19 +8,19 @@
 
   <body>
     <header class="page-header">
-      <a class="visually-hidden" aria-current="page" href="index.html">
-        <img class="logo" src="images/logo.svg" width="140" height="70" alt="логотип города Седона">
+      <a aria-current="page" class="logo" href="index.html">
+        <img class="logo-image" src="images/logo.svg" width="140" height="70" alt="логотип города Седона">
       </a>
       <nav>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link">Гостиницы</a> <!--удалено href="catalog.html"-->
         </ul>
       </nav>
       <ul class="navigation-list navigation-user">
@@ -153,7 +153,7 @@
             <a href="#" class="button button-light">
               <span class="visually-hidden">Показать карточки</span>
               <img class="icon" src="images/view1.svg" width="16" height="14" alt="иконка карточек">
-              <!--добавляются через стили-->
+              <!--добавляются через стили поменять название на "view-1" и в других-->
             </a>
             <a class="button button-whole" href="#">
               <span class="visually-hidden">Показать на весь экран</span>
@@ -172,63 +172,76 @@
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-1.jpg" width="300" height="212"
-                alt="Звездное небо сквозь горы"> </a>
-            <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-            <a class="hotel-card-title" href="#"></a>
-
+                alt="звездное небо сквозь горы">
+            </a>
+            <h3 class="hotel-card-title">
+              <a class="hotel-card-name" href="#">Amara Resort &amp; Spa</a>
+            </h3>
             <span class="hotel-card-type">Гостиница</span>
             <b class="hotel-card-price"> от 4000 ₽</b>
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
-            <span class="hotel-stars four visually-hidden">4 звезды</span>
-            <img class="hotel-stars 4stars" src="images/stars4.svg" width="72" height="68" alt="четыре звезды">
-            <!--добавляются через стили-->
-            <p class="hotel-card-rating"><a href="#">Рейтинг: 8,5</a></p>
+            <p>
+              <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
+              <!--добавляются через стили поменять название на "stars-4" и в других-->
+            </p>
+            <p class="hotel-card-rating">Рейтинг: 8,5</p>
           </li>
+
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-2.jpg" width="300" height="212"
-                alt="Горы сразу после дождя с радугой и черными тучами">
-              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+                alt="горы сразу после дождя с радугой и черными тучами">
             </a>
+            <h3 class="hotel-card-title">
+              <a class="hotel-card-name" href="#">Villas at Poco Diablo</a>
+            </h3>
             <span class="hotel-card-type">Гостиница</span>
             <b class="hotel-card-price"> от 5000 ₽</b>
             <a class="hotel-card-button more" href="#">Подробнее</a>
-            <button class="hotel-card-button favorites" type="button">В избранном</button>
-            <span class="hotel-stars four visually-hidden">4 звезды</span>
-            <img class="hotel-stars 4stars" src="images/stars4.svg" width="72" height="68" alt="четыре звезды">
-            <!--добавляются через стили-->
-            <p class="hotel-card-rating"><a href="#">Рейтинг: 9,2</a></p>
+            <button class="hotel-card-button favorites" type="button">В избранное</button>
+            <p>
+              <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
+              <!--добавляются через стили поменять название на "stars-4" и в других-->
+            </p><!--добавляются через стили-->
+            <p class="hotel-card-rating">Рейтинг: 9,2</p>
           </li>
+
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-3.jpg" width="300" height="212"
                 alt="рельефная гора в солнечный день">
-              <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
+            <h3 class="hotel-card-title">
+              <a class="hotel-card-name" href="#">Desert Quail Inn</a>
+            </h3>
             <span class="hotel-card-type">Гостиница</span>
             <b class="hotel-card-price"> от 2500 ₽</b>
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
-            <span class="hotel-stars three visually-hidden">3 звезды</span>
-            <img class="hotel-stars 3stars" src="images/stars3.svg" width="54" height="51"
-              alt="три звезды"><!--добавляются через стили-->
-            <p class="hotel-card-rating"><a href="#">Рейтинг: 6,9</a></p>
+            <p>
+              <img class="hotel-stars three-stars" src="images/stars-3.svg" width="54" height="51" alt="три звезды">
+              <!--добавляются через стили поменять название на "stars-4" и в других-->
+            </p>
+            <p class="hotel-card-rating">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
               <img class="hotel-image" src="images/hotel-4.jpg" width="300" height="212"
-                alt="Звездное небо и горы с красным оттенком">
-              <h3 class="hotel-card-title">GreenTree Inn</h3>
+                alt="звездное небо и горы с красным оттенком">
             </a>
+            <h3 class="hotel-card-title">
+              <a class="hotel-card-name" href="#">GreenTree Inn</a>
+            </h3>
             <span class="hotel-card-type">Гостиница</span>
             <b class="hotel-card-price"> от 1500 ₽</b>
             <a class="hotel-card-button more" href="#">Подробнее</a>
             <button class="hotel-card-button favorites" type="button">В избранное</button>
-            <span class="hotel-stars two visually-hidden">2 звезды</span>
-            <img class="hotel-stars 2stars" src="images/stars2.svg" width="36" height="34"
-              alt="две звезды"><!--добавляются через стили-->
-            <p class="hotel-card-rating"><a href="#">Рейтинг: 5,0</a></p>
+            <p>
+              <img class="hotel-stars two-stars" src="images/stars-2.svg" width="36" height="34" alt="две звезды">
+              <!--добавляются через стили поменять название на "stars-4" и в других-->
+            </p><!--добавляются через стили-->
+            <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
         <ul class="pagination">

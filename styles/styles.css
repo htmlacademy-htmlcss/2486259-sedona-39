@@ -1,0 +1,516 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+/*должен быть color */
+  background-color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+}
+
+.visually-hidden {
+  display: none; /*visibility: hidden; нужно но из за этого появляются пустоты*/
+}
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 700;
+  height: 64px;
+  width: auto;
+  padding: 0px, 70px, 0px, 70px;
+}
+
+ul {
+	list-style: none;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 50px;
+}
+
+nav li {
+	display: flex;
+	margin-right: 10px;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+nav a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 10px;
+
+}
+
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 120px;
+}
+
+.logo-image {
+  width: 140px;
+  height: 70px;
+}
+
+.navigation-link-search {
+  background-image: url("../images/search.svg");
+  width:20px;
+  height: 20px;
+  /*padding: 22px 12px;
+  color: #000000;
+  background-repeat: no-repeat;
+width: 44px;
+height: 64px;*/
+}
+
+.navigation-link-likes {
+  background-image: url("../images/like.svg");
+  color: #000000;
+  background-repeat: no-repeat;
+  /*padding: 22px 12px;
+width: 44px;
+height: 64px;*/
+}
+
+
+.navigation-item {
+  width: 100px;
+  height: 64px;
+/*padding: 20px, 16px, 20px, 16px
+gap: 8px*/
+
+}
+
+.navigation-link {
+  font-family: "PT Sans", sans-serif;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  text-transform:capitalize;
+} /*подчеркивание добавить у "главная"*/
+
+.navigation-user {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hero {
+  color: #000000;
+  background-color:#ffffff;
+  background-image: url("../images/background-hero.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 485px;
+}
+
+
+.navigation-link-button {
+  border-radius: 4px;
+padding: 8px 50px;
+width: 160px;
+height: 36px;
+display: flex;
+justify-content: center;
+align-items: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(117, 97, 87, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  text-align: center;
+}
+
+.hero-image {
+text-align: center;
+padding-top: 51px;
+padding-left: 371px;
+
+}
+
+.advantages-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.header-1 {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--texts-texts-basic);
+  padding-top: 69px;
+}
+
+.header-2 {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.advantages-description {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+h3 {
+  font-family: PT Sans;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.h3-item {
+  font-family: PT Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.services-name {
+font-family: PT Sans;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+.services-description {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.search-hotels-link {
+
+   border-radius: 4px;
+   padding: 8px 50px;
+   width: 160px;
+   height: 36px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(117, 97, 87, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+.subscription {
+ background-image: url("../images/subscription-photo.jpg");
+ width: 1,200px;
+ height: 414.86px;
+ padding: 96px, 258px, 104px, 258px;
+ gap: 10px;
+ text-align: center;
+}
+
+.subscription-title {
+ font-family: PT Sans;
+ font-size: 30px;
+ font-weight: 700;
+ line-height: 36px;
+ letter-spacing: 0em;
+ text-align: center;
+}
+
+.h2-item {
+ font-family: PT Sans;
+ font-size: 22px;
+ font-weight: 400;
+ line-height: 26px;
+ letter-spacing: 0em;
+ text-align: center;
+}
+
+.subscription-form {
+ width: 452px;
+ height: 52px;
+ padding: 12px, 20px, 12px, 20px;
+ border-radius: 4px, 0px, 0px, 4px;
+ gap: 260px;
+ text-align: center;
+}
+
+page-footer {
+ width: 1200px;
+  height: 120px;
+  padding: 40px, 70px, 30px, 70px;
+}
+
+.social {
+ width: 47.33px;
+ height: 40px;
+ padding: 0px, 10px, 0px, 10px;
+ gap: 10px;
+ color: rgba(131, 179, 211, 1);
+}
+
+.phone {
+ width: 331px;
+ height: 40px;
+ top: 5px;
+ left: 195px;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+.academy-logo {
+ background-image: url("../images/logo-html.svg");
+ width: 114.9px;
+ height: 32.9px;
+}
+
+/*
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-header {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.navigation-link {
+  font-family: "PT Sans Narrow", sans-serif;
+  line-height: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-index {
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/index-bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.advantages-list {
+  text-align: center;
+}
+
+.advantages-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.index-columns {
+  color: #242424;
+  background-color: #fbf7f4;
+  background-image: url("../images/bg-noisy.png");
+}
+
+
+.services {
+  text-transform: uppercase;
+}
+
+.services-title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+}
+
+.services-list {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.services-price {
+  color: #af7842;
+}
+
+.gallery-title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts {
+  font-weight: 700;
+}
+
+.contacts-title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-subtitle {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #af7842;
+}
+
+.contacts-phone {
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #242424;
+}
+
+.appointment-title {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.appointment-form {
+  color: #595959;
+}
+
+.form-label {
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #242424;
+  background-image: url("../images/bg-noisy.png");
+  background-repeat: repeat;
+}
+
+.page-footer a {
+  color: #ffffff;
+}
+
+.page-footer-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-address p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-contacts-address-phone {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.footer-contacts-map-link {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/*
+/*
+#row:checked ~ .navigation-list { flex-direction: row; }
+#nowrap:checked ~ .navigation-list { flex-wrap: nowrap; }
+#flex-start:checked ~ .navigation-list { justify-content: flex-start; }*/
