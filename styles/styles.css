@@ -323,12 +323,14 @@ font-family: inherit;
  font-size: 40px;
  font-weight: 400;
  line-height: 40px;
- text-align: center;
  color: #000000;
  background-color: #ffffff;
  text-align: center;
  text-transform: uppercase;
 }
+/* не сбросился цвет ссылки*/
+
+
 
 .htmlacademy-link {
  background-image: url("../images/logo-html.svg");
@@ -342,6 +344,231 @@ font-family: inherit;
 
 
 
+.main-inner {
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  background-color: #f2f2f2;
+  background-image: url("../images/filter-hotels.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.inner-header-title {
+font-family: PT Sans;
+font-size: 60px;
+font-weight: 700;
+line-height: 78px;
+text-align: left;
+}
+
+.breadcrumbs-item-header {
+  color:#ffffff;
+  background-color: #000000;
+  background-image: url("../images/bread-home.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width:20px;
+  height: 20px;
+}
+
+.catalog-filter-title {
+  font-family: PT Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+
+}
+
+
+.control {
+  color: rgba(255, 255, 255, 1);
+font-family: PT Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 23px;
+text-align: left;
+}
+
+.legend {
+  color: rgba(255, 255, 255, 1);
+font-family: PT Sans;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+}
+/* не сработала стоимость, делаем для нее другой класс?*/
+
+.button-filter {
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+/*как для нее сбросить фон? а потом вернуть кнопке active?*/
+
+
+.result {
+font-family: PT Sans;
+font-size: 30px;
+font-weight: 700;
+line-height: 36px;
+text-align: left;
+}
+
+.catalog-filter-group {
+  color:#ffffff;
+}
+
+.select-control {
+  font-family: PT Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+}
+
+.button button-light {
+  color: #000000;
+  background-color: #f2f2f2;
+  background-image: url("../images/view1.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.button button-whole {
+  color: #000000;
+  background-color: #f2f2f2;
+  background-image: url("../images/view2.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.button button-list {
+  color: #000000;
+  background-color: #f2f2f2;
+  background-image: url("../images/view3.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*никакие не добавились */
+
+.hotel-card-title {
+font-family: PT Sans;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+text-align: left;
+}
+
+.hotel-card-type{
+  font-family: PT Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+}
+
+.hotel-card-price {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: right;
+}
+
+.more .hotel-card-button {
+font-family: PT Sans;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+background-color: rgba(117, 97, 87, 1);
+padding: 8px, 50px, 8px, 50px
+border-radius: 4px
+}
+/*не добавилось */
+
+.favorites .hotel-card-button {
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(130, 179, 211, 1);
+padding: 8px, 50px, 8px, 50px
+border-radius: 4px
+}
+/*не добавилось */
+
+.hotel-card-rating {
+font-family: PT Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+text-transform:capitalize;
+}
+
+.pagination-item {
+  width: 60px;
+height: 60px;
+padding: 12px 0px 13px 0px;
+border-radius: 4px;
+background-color: rgba(130, 179, 211, 1);
+}
+
+.pagination-link {
+  font-family: PT Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+ color: rgba(255, 255, 255, 1);
+ text-align: center;
+}
+/*не в центре */
+
+.pagination-current .pagination-link {
+  background-color: rgba(242, 242, 242, 1);
+  color: #000000;
+}
+/*не работает */
+
+/*как убрать в subscription background? дать доп класс или сделать этот главным а на главной дополнительным с фото?*/
+
+
+.four-stars {
+  background-color: #f2f2f2;
+  background-image: url("../images/stars-4.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 68px;
+}
+
+.three-stars {
+  background-color: #f2f2f2;
+  background-image: url("../images/stars-3.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 51px;
+}
+
+.two-stars {
+  background-color: #f2f2f2;
+  background-image: url("../images/stars-2.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 34px;
+}
+/* stars не работает */
 
 /*
 .button {
