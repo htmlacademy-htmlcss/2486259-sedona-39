@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,17 +10,39 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
   font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+}
+
+html {
+  height: 100%;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.catalog-filter-group {
+
 }
 
 .visually-hidden {
@@ -36,21 +58,48 @@ body {
   overflow: hidden;
 }
 
-.nobullet {
+.list-reset {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .page-header {
+  display: flex;
+  align-items: center;
+  width: 1060px;
+  margin: 0 auto;
   color: #000000;
   background-color: #ffffff;
   font-weight: 700;
+  padding: 0 70px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: row;
+  width: 339px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 799px;
 }
 
 .logo-image {
-  width: 140px;
-  height: 70px;
-  margin: 0px;
-  padding: 0px;
+  display: block;
+  margin: 0 auto;
+  margin-right: 30px;
 }
 
 .navigation-link {
@@ -90,7 +139,6 @@ body {
 .navigation-item {
   width: 100px;
   height: 64px;
-
 }
 
 .navigation-user {
@@ -100,14 +148,16 @@ body {
 }
 
 .hero {
+  background-color: #a0a0a0;
   background-image:url("../images/divider.svg"), url("../images/background.jpg");
-  background-size: 100% auto, 1200px 485 px;
+  background-size: 1200px 57px, cover;
   background-repeat: no-repeat;
   background-position: left bottom, left top;
-  background-color:a0a0a0;
-/* что с шириной, не срабатывает из figure*/
 }
 
+.hero-background {
+  margin: 0;
+}
 
 .navigation-link-button {
   border-radius: 4px;
@@ -126,6 +176,7 @@ body {
   background-color: #ffffff;
 }
 .advantages-item {
+  display: flex;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -158,9 +209,28 @@ text-align: center;
 
 
 .advantages-list {
- text-align: center;
+  display: flex;
+ flex-wrap: wrap;
+ max-width: 1200px;
 }
 
+.advantages-item {
+  width: 400px;
+  min-height: 385px;
+}
+
+.advantages-item-images {
+  width: 1200px;
+  height: 385px;
+}
+
+.advantages-item.advantages-item-images.reverse {
+  flex-direction: row-reverse;
+}
+
+.advantages-item-light {
+
+}
 .hero-image {
 text-align: center;
 padding-top: 51px;
@@ -183,12 +253,25 @@ padding-left: 371px;
   line-height: 21px;
 }
 
-.services-item {
-  background-color: rgba(131, 179, 211, 0.12);
-  text-align: center;
+.services-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  min-height: 385px;
 }
 
-.light .services-item {
+.services-item {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.12);
+  text-align: center;
+
+}
+
+.services-item.light {
   background-color: #ffffff;
 }
 /* не сработал, что не так?*/
@@ -239,6 +322,21 @@ line-height: 28px;
   text-align: center;
 }
 
+.hotels-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hotel-card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 340px;
+}
+
+
+
 .search-hotels-link {
  border-radius: 4px;
  width: 160px;
@@ -254,12 +352,19 @@ line-height: 28px;
 }
 
 .subscription {
- background-image: url("../images/subscription-photo.jpg");
- background-size: cover;
+font-family: inherit;
  padding: 96px 258px 104px 258px;
  text-align: center;
- background-repeat: no-repeat;
- color: #ffffff;
+ background-color: #ffffff;
+ color:#000000;
+}
+
+.subscription-photo {
+
+  background-image: url("../images/subscription-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
 }
 
 .subscription-title {
@@ -268,6 +373,7 @@ font-family: inherit;
  font-weight: 700;
  line-height: 36px;
  text-align: center;
+ text-transform: uppercase;
 }
 
 .subscription-description {
@@ -278,6 +384,15 @@ font-family: inherit;
  text-align: center;
 }
 
+.search-hotels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-title {
+  text-transform: uppercase;
+}
 .subscription-form {
  width: 452px;
  height: 52px;
@@ -293,7 +408,7 @@ padding: 12px 20px 12px 20px;
 border-radius: 4px, 0px, 0px, 4px
 }
 
-button {
+.button {
   font-family: "PT Sans", sans serif;
   font-size: 20px;
   font-weight: 700;
@@ -301,34 +416,45 @@ button {
   text-align: center;
   color: #ffffff;
   background-color: rgba(130, 179, 211, 1);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-page-footer {
- width: 1200px;
- height: 120px;
- padding: 40px 70px 30px 70px;
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin: 0 auto;
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 700;
+  padding: 0 70px;
+  min-height: 120px;
+  padding: 40px 70px 30px;
 }
 
 .social {
  width: 47px;
  height: 40px;
  padding: 0px 10px 0px 10px;
- color: rgba(131, 179, 211, 1);
 }
 
-.phone {
-font-family: inherit;
+.social-list {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.contacts-phone {
  width: 331px;
  height: 40px;
- font-size: 40px;
  font-weight: 400;
  line-height: 40px;
  color: #000000;
  background-color: #ffffff;
  text-align: center;
- text-transform: uppercase;
 }
-/* не сбросился цвет ссылки*/
 
 
 
@@ -353,12 +479,29 @@ font-family: inherit;
   background-repeat: no-repeat;
 }
 
+
+.wrapper-inner {
+display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1060;
+}
+
+.wrapper-button {
+  display: flex;
+  flex-direction: row;
+}
+
 .inner-header-title {
 font-family: PT Sans;
 font-size: 60px;
 font-weight: 700;
 line-height: 78px;
 text-align: left;
+color:#ffffff;
 }
 
 .breadcrumbs-item-header {
@@ -391,7 +534,7 @@ line-height: 23px;
 text-align: left;
 }
 
-.legend {
+.catalog-filter-title {
   color: rgba(255, 255, 255, 1);
 font-family: PT Sans;
 font-size: 20px;
@@ -411,7 +554,18 @@ text-align: left;
 /*как для нее сбросить фон? а потом вернуть кнопке active?*/
 
 
+.options-search {
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+}
+
 .result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1060px;
+  padding: 50px 70px;
 font-family: PT Sans;
 font-size: 30px;
 font-weight: 700;
@@ -431,7 +585,7 @@ line-height: 21px;
 text-align: left;
 }
 
-.button button-light {
+.button.button-light {
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view1.svg");
@@ -439,7 +593,7 @@ text-align: left;
   background-repeat: no-repeat;
 }
 
-.button button-whole {
+.button.button-whole {
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view2.svg");
@@ -447,7 +601,7 @@ text-align: left;
   background-repeat: no-repeat;
 }
 
-.button button-list {
+.button.button-list {
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view3.svg");
@@ -465,7 +619,7 @@ line-height: 28px;
 text-align: left;
 }
 
-.hotel-card-type{
+.hotel-card-type {
   font-family: PT Sans;
 font-size: 18px;
 font-weight: 400;
@@ -481,7 +635,7 @@ text-align: left;
   text-align: right;
 }
 
-.more .hotel-card-button {
+.hotel-more {
 font-family: PT Sans;
 font-size: 16px;
 font-weight: 700;
@@ -494,7 +648,7 @@ border-radius: 4px
 }
 /*не добавилось */
 
-.favorites .hotel-card-button {
+.hotel-card-button.favorites {
   font-family: PT Sans;
   font-size: 16px;
   font-weight: 700;
@@ -512,7 +666,12 @@ font-family: PT Sans;
 font-size: 16px;
 font-weight: 400;
 line-height: 20px;
-text-transform:capitalize;
+text-transform: uppercase;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
 }
 
 .pagination-item {
@@ -523,21 +682,24 @@ border-radius: 4px;
 background-color: rgba(130, 179, 211, 1);
 }
 
+
 .pagination-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   font-family: PT Sans;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
  color: rgba(255, 255, 255, 1);
  text-align: center;
+ cursor: pointer;
 }
-/*не в центре */
 
-.pagination-current .pagination-link {
+.pagination-link.pagination-current {
   background-color: rgba(242, 242, 242, 1);
   color: #000000;
 }
-/*не работает */
 
 /*как убрать в subscription background? дать доп класс или сделать этот главным а на главной дополнительным с фото?*/
 
