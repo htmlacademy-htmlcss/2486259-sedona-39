@@ -99,6 +99,7 @@ html {
   display: block;
   margin: 0 auto;
   margin-right: 30px;
+  margin-bottom: -6px;
 }
 
 .navigation-link {
@@ -111,7 +112,7 @@ html {
   color: #000000;
   text-decoration: none;
   text-align: center;
-  text-transform:capitalize;
+  text-transform: capitalize;
   cursor: pointer;
 
 }
@@ -142,8 +143,7 @@ html {
 
 
 .navigation-item {
-  width: 100px;
-  height: 64px;
+
 }
 
 .navigation-user {
@@ -157,11 +157,15 @@ html {
   background-image:url("../images/divider.svg"), url("../images/background.jpg");
   background-size: 1200px 57px, cover;
   background-repeat: no-repeat;
-  background-position: left bottom, left top;
+  background-position: left bottom -1px, left top;
 }
 
 .hero-background {
-  margin: 0;
+  text-align: center;
+padding-top: 51px;
+padding-bottom: 82px;
+margin: 0 auto;
+min-height: 485px;
 }
 
 .navigation-link-button {
@@ -183,6 +187,7 @@ html {
 }
 .advantages-item {
   display: flex;
+  flex-direction: column;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -203,7 +208,10 @@ html {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  padding-top: 69px;
+  text-transform: uppercase;
 }
+
 
 .advantages-describtion {
 font-family: inherit;
@@ -211,37 +219,54 @@ font-size: 22px;
 font-weight: 400;
 line-height: 26px;
 text-align: center;
+padding-top: 25px;
+padding-bottom: 69px;
 }
 
 
 .advantages-list {
-  display: flex;
- flex-wrap: wrap;
- max-width: 1200px;
+
 }
 
 .advantages-item {
+  display: flex;
+  flex-direction: row ;
   width: 400px;
   min-height: 385px;
 }
+.wrapper-advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1200px;
+}
 
-.advantages-item-images {
+.wrapper-advantages-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper-advantages-image {
+  display: flex;
+  flex-direction: row;
   width: 1200px;
   height: 385px;
 }
 
-.advantages-item.advantages-item-images.reverse {
+.wrapper-advantages-image.reverse {
   flex-direction: row-reverse;
 }
 
 .advantages-item-light {
-
+background-color: rgba(131, 179, 211, 0.12);
+;
 }
 .hero-image {
 text-align: center;
 padding-top: 51px;
-padding-left: 371px;
 padding-bottom: 82px;
+margin: 0 auto;
 }
 
 .advantages-title {
@@ -271,18 +296,46 @@ padding-bottom: 82px;
 }
 
 .services-item {
-  display: flex;
-  flex-direction: column;
   width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
   text-align: center;
   min-height: 385px;
+  box-sizing: border-box;
+  padding: 85px 81px;
 }
 
 .services-item.light {
   background-color: #ffffff;
+  background-image: url("../images/food.svg");
+  color: #000000;
+  background-repeat: no-repeat;
+  min-width: 20px;
+  min-height: 20px;
+  font-size: 20px;
+  line-height: 24px;
 }
-/* не сработал, что не так?*/
+
+.services-item.house {
+  background-color: rgba(131, 179, 211, 0.12);
+  background-image: url("../images/house.svg");
+  color: #000000;
+  background-repeat: no-repeat;
+  min-width: 72px;
+  min-height: 75px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.services-item.souvenir {
+  background-color: rgba(131, 179, 211, 0.12);
+  background-image: url("../images/prise.svg");
+  color: #000000;
+  background-repeat: no-repeat;
+  min-width: 20px;
+  min-height: 20px;
+  font-size: 20px;
+  line-height: 24px;
+}
 
 .services-title {
   font-family: inherit;
@@ -290,6 +343,8 @@ padding-bottom: 82px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  padding-top: 64px;
+  text-transform: uppercase;
 }
 
 .services-name {
@@ -297,7 +352,6 @@ font-family: inherit;
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
-padding: 30px 78px;
 }
 
 .services-definition {
@@ -306,6 +360,7 @@ padding: 30px 78px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  padding-bottom: 64px;
 }
 
 .services-description {
@@ -321,6 +376,7 @@ padding: 30px 78px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  padding-top: 96px;
 }
 
 .search-description {
@@ -335,6 +391,12 @@ padding: 30px 78px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 0 70px;
+}
+
+.hotel-card {
+  gap: 20px;
+  width: 340px;
 }
 
 .hotel-card-link {
@@ -392,6 +454,16 @@ font-family: inherit;
  line-height: 26px;
  text-align: center;
 }
+
+.wrapper-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 684px;
+  min-height: 215px;
+  box-sizing: border-box;
+}
+
 
 .search-hotels {
   display: flex;
@@ -457,7 +529,7 @@ border-radius: 4px, 0px, 0px, 4px
 
 .contacts-phone {
  width: 331px;
- height: 40px;
+ font-size: 40px;
  font-weight: 400;
  line-height: 40px;
  color: #000000;
@@ -480,7 +552,7 @@ border-radius: 4px, 0px, 0px, 4px
 .main-inner {
   font-family: "PT Sans", sans-serif;
   color: #000000;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   background-image: url("../images/filter-hotels.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -509,6 +581,10 @@ font-weight: 700;
 line-height: 78px;
 text-align: left;
 color:#ffffff;
+}
+
+.breadcrumbs {
+  display: flex;
 }
 
 .breadcrumbs-item-header {
@@ -567,12 +643,16 @@ text-align: left;
   width: 160px;
 }
 
+.result-title {
+  margin: 0;
+}
+
 .result {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 1060px;
-  padding: 50px 70px;
+  padding: 40px 50px;
 font-family: PT Sans;
 font-size: 30px;
 font-weight: 700;
@@ -585,14 +665,18 @@ text-align: left;
 }
 
 .select-control {
-  font-family: PT Sans;
+font-family: PT Sans;
 font-size: 18px;
 font-weight: 400;
 line-height: 21px;
 text-align: left;
+margin: 0;
 }
 
 .button.button-light {
+  display: block;
+  width: 16px;
+  height: 14px;
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view1.svg");
@@ -601,6 +685,9 @@ text-align: left;
 }
 
 .button.button-whole {
+  display: block;
+  width: 16px;
+  height: 14px;
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view2.svg");
@@ -609,6 +696,9 @@ text-align: left;
 }
 
 .button.button-list {
+  display: block;
+  width: 16px;
+  height: 14px;
   color: #000000;
   background-color: #f2f2f2;
   background-image: url("../images/view3.svg");
@@ -680,21 +770,23 @@ text-transform: uppercase;
   display: flex;
   flex-direction: row;
   margin: 0;
-  padding: 0;
+  padding: 40px 70px;
 }
 
 .pagination-item {
 width: 60px;
 height: 60px;
-padding: 12px 0px 13px 0px;
 border-radius: 4px;
 background-color: rgba(130, 179, 211, 1);
 margin-right: 8px;
+box-sizing: border-box;
 }
 /*для last child поставить (not(:last-child)*/
 
 .pagination-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 60px;
   min-height: 60px;
@@ -715,6 +807,11 @@ margin-right: 8px;
   color: #000000;
 }
 
+
+.pagination-link.white{
+  background-color: #ffffff;
+  color: #000000;
+}
 /*как убрать в subscription background? дать доп класс или сделать этот главным а на главной дополнительным с фото?*/
 
 
