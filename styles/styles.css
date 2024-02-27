@@ -91,6 +91,12 @@ html {
   margin-left: auto;
 }
 
+.navigation-link.current {
+text-decoration: underline solid #756257;
+text-decoration-thickness: 2px;
+text-underline-offset: 19 px;
+}
+
 .page-container {
   margin: 0 auto;
 }
@@ -143,7 +149,7 @@ html {
 
 
 .navigation-item {
-
+box-sizing: border-box;
 }
 
 .navigation-user {
@@ -240,6 +246,7 @@ padding-bottom: 69px;
   justify-content: center;
   flex-wrap: wrap;
   width: 1200px;
+  /*padding: 102px 85px;*/
 }
 
 .wrapper-advantages-container {
@@ -387,38 +394,51 @@ line-height: 28px;
   text-align: center;
 }
 
-.hotels-list{
+.hotels-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0 70px;
+  gap: 20px;
 }
 
+
 .hotel-card {
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   width: 340px;
+  box-shadow: 0 0 0 1px #E6E6E6;
 }
+
+.hotel-card:nth-child(3) {
+  margin-right: 0;
+}
+
 
 .hotel-card-link {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 340px;
+  width: 140px;
 }
 
 
-
 .search-hotels-link {
+display: block;
+box-sizing: border-box;
  border-radius: 4px;
- width: 160px;
+ width: 376px;
  height: 36px;
- font-size: 16px;
- line-height: 20px;
+ font-size: 20px;
+ line-height: 36px;
  font-weight: 700;
  text-align: center;
  color: #ffffff;
  background-color: rgba(117, 97, 87, 1);
  text-decoration: none;
+ padding: 8px 50px;
  text-transform: uppercase;
 }
 
@@ -431,7 +451,6 @@ font-family: inherit;
 }
 
 .subscription-photo {
-
   background-image: url("../images/subscription-photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -745,6 +764,28 @@ border-radius: 4px
 }
 /*не добавилось */
 
+.four-stars {
+background-color: #f2f2f2;
+background-image: url("../images/stars4.svg");
+background-size: 100% auto;
+background-repeat: no-repeat;
+}
+
+.three-stars {
+background-color: #f2f2f2;
+background-image: url("../images/stars3.svg");
+background-size: 100% auto;
+background-repeat: no-repeat;
+}
+
+.two-stars {
+  background-color: #f2f2f2;
+  background-image: url("../images/stars2.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+ }
+
+
 .hotel-card-button.favorites {
   font-family: PT Sans;
   font-size: 16px;
@@ -769,7 +810,9 @@ text-transform: uppercase;
 .pagination {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
+  gap: 8px;
   padding: 40px 70px;
 }
 
@@ -778,7 +821,6 @@ width: 60px;
 height: 60px;
 border-radius: 4px;
 background-color: rgba(130, 179, 211, 1);
-margin-right: 8px;
 box-sizing: border-box;
 }
 /*для last child поставить (not(:last-child)*/
