@@ -97,10 +97,15 @@ html {
 
 .page-container {
   margin: 0 auto;
+}
+
+.page-container.inner {
   background-color: #ffffff;
   background-image: url("../images/filter-hotels.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-top: 35px;
+  padding-bottom: 70px;
 }
 
 .logo-image {
@@ -320,10 +325,8 @@ html {
   text-align: center;
   max-height: 385px;
   box-sizing: border-box;
-  padding: 183px 85px 174px;
+  padding: 183px 30px 81px;
   margin: 0 auto;
-  min-width: 72px;
-  min-height: 75px;
   font-size: 20px;
   line-height: 24px;
 }
@@ -383,6 +386,8 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  max-width: 230px;
+  margin: 0 auto;
 }
 
 .search-title {
@@ -407,6 +412,7 @@ html {
 }
 
 /* hotels */
+
 .hotels-list {
   display: grid;
   list-style-type: none;
@@ -419,43 +425,27 @@ html {
 }
 
 .hotel-card {
-  display: flex;
+  display: ;
   flex-direction: column;
   width: 340px;
   padding: 20px;
   box-shadow: 0 0 0 1px #E6E6E6;
   box-sizing: border-box;
+  max-height: 438px;
 }
 
-.product-card-type {
+.product-row {
   display: flex;
-  margin: 0;
-  padding: 8px;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
-  box-sizing: border-box;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
 }
 
 .hotel-card-name {
   margin-bottom: 16px;
-}
-
-.product-card-button {
-  display: flex;
-  margin: 0;
-  padding: 8px;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-}
-
-.product-card-raiting {
-  display: flex;
-  margin: 0;
-  padding: 8px;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  box-sizing: border-box;
 }
 
 /*
@@ -468,7 +458,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 140px;
 }
 
 
@@ -477,9 +466,8 @@ html {
   display: block;
   box-sizing: border-box;
   border-radius: 4px;
-  /*width: 376px;*/
-  width: fit-content;
-  height: 36px;
+  min-width: 376px;
+  height: 52px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -500,6 +488,13 @@ html {
   text-align: center;
   background-color: #ffffff;
   color: #000000;
+}
+
+.subscription-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 684px;
 }
 
 .subscription-photo {
@@ -574,6 +569,7 @@ html {
 }
 
 .button {
+  display: block;
   font-family: "PT Sans", sans serif;
   font-size: 20px;
   font-weight: 700;
@@ -584,6 +580,7 @@ html {
   text-transform: uppercase;
   cursor: pointer;
   margin: 0;
+  border: none;
 
 }
 
@@ -645,7 +642,9 @@ html {
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 1060;
+  /*width: 1060;*/
+  gap: 30px;
+  min-height: 160px;
 }
 
 .wrapper-button {
@@ -670,6 +669,9 @@ html {
 .breadcrumbs {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  max-width: 114px;
+  justify-content: space-between;
 }
 
 .breadcrumbs-item-header {
@@ -689,6 +691,7 @@ html {
   line-height: 24px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+  min-width: 170px;
 }
 
 .control {
@@ -698,6 +701,7 @@ html {
   font-weight: 400;
   line-height: 23px;
   text-align: left;
+  min-width: 170px;
 }
 
 .catalog-filter-title {
@@ -707,6 +711,17 @@ html {
   font-weight: 700;
   line-height: 24px;
   text-align: left;
+  min-width: 170px;
+}
+
+.catalog-filter-list {
+  min-width: 170px;
+}
+
+.form-value {
+  max-width: 143px;
+  min-height: 48px;
+  gap: 2px;
 }
 
 /* не сработала стоимость, делаем для нее другой класс?*/
@@ -737,6 +752,7 @@ html {
 .filter-passive {
   background-color: rgba(0, 0, 0, 0);
   margin: 0;
+  border: none;
 }
 
 .wrapper-filter-buttons {
@@ -744,12 +760,14 @@ html {
   flex-direction: column;
   justify-content: center;
   margin-left: 70px;
+  margin-top: 56px
 }
 
 .options-search {
   display: flex;
   flex-direction: row;
   width: 160px;
+  margin: 0;
 }
 
 .options-button {
@@ -778,16 +796,35 @@ html {
   flex-direction: row;
   justify-content: space-between;
   width: 1060px;
-  padding: 40px 50px;
+  margin: 0 auto;
+  align-items: center;
   font-family: PT Sans;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-align: left;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 .catalog-filter-group {
   color: #ffffff;
+  border: none;
+}
+
+.catalog-filter-price {
+  display: flex;
+  max-width: 288px;
+  border: none;
+  color: #ffffff;
+}
+
+.catalog-filter-form {
+  display: block;
+  max-width: 143px;
+  max-height: 48px;
+  box-sizing: border-box;
+  text-align: right;
 }
 
 .select-control {
@@ -814,6 +851,7 @@ html {
   font-weight: 700;
   line-height: 28px;
   text-align: left;
+  /*margin: 0;*/
 }
 
 .hotel-card-type {
@@ -823,6 +861,7 @@ html {
   line-height: 21px;
   text-align: left;
   box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
 .hotel-card-price {
@@ -832,25 +871,11 @@ html {
   line-height: 21px;
   text-align: right;
   box-sizing: border-box;
-}
-
-.hotel-more {
-  font-family: PT Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(117, 97, 87, 1);
-  border-radius: 4px;
-  text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .four-stars {
-  background-color: #ffffff;
-  background-image: url("../images/stars4.svg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  height: 17px;
 }
 
 .three-stars {
@@ -867,26 +892,32 @@ html {
   background-repeat: no-repeat;
 }
 
-.hotel-card-button.favorites {
+.hotel-card-button {
   font-family: PT Sans;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(130, 179, 211, 1);
-  padding: 8px, 50px, 8px, 50px;
+  background-color: rgba(117, 97, 87, 1);
   border-radius: 4px;
+  text-decoration: none;
+  width: 140px;
+  height: 36px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.hotel-card-button.favorites {
+  background-color: rgba(130, 179, 211, 1);
 }
 
 /*не добавилось */
 
-.hotel-card-rating {
-  font-family: PT Sans;
-  font-size: 16px;
+.hotel-card-button.rating {
+  background-color: rgba(242, 242, 242, 1);
   font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
+  color: rgba(51, 51, 51, 1);
 }
 
 /* pagination */

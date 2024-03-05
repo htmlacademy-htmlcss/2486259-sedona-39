@@ -52,7 +52,7 @@
       </header>
 
       <main class="main-inner main-container">
-        <div class="page-container">
+        <div class="page-container inner">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <header class="inner-header">
             <ul class="breadcrumbs">
@@ -129,10 +129,10 @@
                   </ul>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="catalog-filter-price">
                   <legend>Стоимость <span>₽:</span></legend>
-                  <label>от<input type="text" value="0"></label>
-                  <label>до<input type="text" value="9000"></label>
+                  <label class="catalog-filter-form">от<input class="form-value" type="text" value="0"></label>
+                  <label class="catalog-filter-form">до<input class="form-value" type="text" value="9000"></label>
                 </fieldset>
 
                 <!--<fieldset>
@@ -141,7 +141,7 @@
                   </div>
                 </fieldset>-->
                 <section class="wrapper-filter-buttons">
-                  <button class="filter " type="submit">Применить</button>
+                  <button class="filter" type="submit">Применить</button>
                   <button class="filter filter-passive" type="reset">Сбросить</button>
                 </section>
             </form>
@@ -155,7 +155,7 @@
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <p class="options-search">
+            <div class="options-search">
               <a href="#" class="options-button options-button-current">
                 <span class="visually-hidden">Показать карточки</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +194,7 @@
                   <path d="M16 12H4V14H16V12Z" fill="black" />
                 </svg>
               </a>
-            </p>
+            </div>
           </div>
 
           <ul class="hotels-list list-reset">
@@ -206,19 +206,17 @@
               <h3 class="hotel-card-title">
                 <a class="hotel-card-name" href="#">Amara Resort &amp; Spa</a>
               </h3>
-              <div class="product-card-type">
+              <div class="product-row">
                 <span class="hotel-card-type">Гостиница</span>
                 <b class="hotel-card-price"> от 4000 ₽</b>
               </div>
-              <div class="product-card-button">
-                <a class="hotel-more" href="#">Подробнее</a>
+              <div class="product-row">
+                <a class="hotel-card-button" href="#">Подробнее</a>
                 <button class="hotel-card-button favorites" type="button">В избранное</button>
-                <p>
               </div>
-              <div class="product-card-raiting">
+              <div class="product-row">
                 <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
-                </p>
-                <p class="hotel-card-rating">Рейтинг: 8,5</p>
+                <p class="hotel-card-button rating">Рейтинг: 8,5</p>
               </div>
             </li>
 
