@@ -143,9 +143,9 @@ html {
   cursor: pointer;
 }
 
-/*почему то не появился*/
-
 .navigation-link-likes {
+  /*position: relative;*/
+  display: block;
   background-image: url("../images/like.svg");
   color: #000000;
   background-repeat: no-repeat;
@@ -156,6 +156,9 @@ html {
   background-color: #ffffff;
 }
 
+.likes {
+
+}
 
 .navigation-item {
   box-sizing: border-box;
@@ -281,6 +284,13 @@ html {
   text-transform: uppercase;
 }
 
+.advantages-item-title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .advantages-item-description {
   max-width: 230px;
   text-align: center;
@@ -297,7 +307,6 @@ html {
   width: 100%;
   height: auto;
 }
-
 
 .hero-image {
   text-align: center;
@@ -412,12 +421,10 @@ html {
 }
 
 /* hotels */
-
 .hotels-list {
   display: grid;
   list-style-type: none;
   grid-template-columns: repeat(3, 340px);
-  margin: 0;
   padding: 0 70px;
   margin: 0;
   gap: 20px;
@@ -425,13 +432,11 @@ html {
 }
 
 .hotel-card {
-  display: ;
-  flex-direction: column;
   width: 340px;
   padding: 20px;
   box-shadow: 0 0 0 1px #E6E6E6;
   box-sizing: border-box;
-  max-height: 438px;
+  min-height: 438px;
 }
 
 .product-row {
@@ -441,25 +446,22 @@ html {
   margin-bottom: 16px;
   gap: 16px;
   width: 100%;
-  margin: 0;
+  margin: 0 0 16px 0;
+}
+
+.product-row:last-child {
+  margin-bottom: 0;
 }
 
 .hotel-card-name {
   margin-bottom: 16px;
 }
 
-/*
-.wrapper-hotel-card {
-  display: grid;
-  justify-content: space-around;
-}*/
-
 .hotel-card-link {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 .search-hotels-link {
   margin: 0 auto;
@@ -483,8 +485,12 @@ html {
 
 /* subscription */
 .subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: inherit;
-  padding: 96px 258px 104px 258px;
+  padding: 96px 58px 104px 58px;
   text-align: center;
   background-color: #ffffff;
   color: #000000;
@@ -609,7 +615,6 @@ html {
   flex-direction: row;
 }
 
-
 .contacts-phone {
   width: 331px;
   font-size: 40px;
@@ -642,8 +647,8 @@ html {
 .wrapper {
   display: flex;
   flex-direction: row;
-  /*width: 1060;*/
-  gap: 30px;
+  /*width: 1060;
+  gap: 30px;*/
   min-height: 160px;
 }
 
@@ -684,6 +689,7 @@ html {
   height: 20px;
 }
 
+
 .catalog-filter-title {
   font-family: PT Sans;
   font-size: 20px;
@@ -704,15 +710,6 @@ html {
   min-width: 170px;
 }
 
-.catalog-filter-title {
-  color: rgba(255, 255, 255, 1);
-  font-family: PT Sans;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-  min-width: 170px;
-}
 
 .catalog-filter-list {
   min-width: 170px;
@@ -724,8 +721,6 @@ html {
   gap: 2px;
 }
 
-/* не сработала стоимость, делаем для нее другой класс?*/
-
 .button-filter {
   font-family: PT Sans;
   font-size: 16px;
@@ -734,7 +729,6 @@ html {
   text-align: center;
 }
 
-/*как для нее сбросить фон? а потом вернуть кнопке active?*/
 .filter {
   font-family: inherit;
   font-size: 16px;
@@ -781,6 +775,7 @@ html {
   justify-content: center;
   align-itens: center;
   background-color: #ffffff;
+  margin-right: 8px;
 }
 
 .options-button.options-button-current {
@@ -851,7 +846,7 @@ html {
   font-weight: 700;
   line-height: 28px;
   text-align: left;
-  /*margin: 0;*/
+  margin: 16px 0;
 }
 
 .hotel-card-type {
@@ -861,7 +856,6 @@ html {
   line-height: 21px;
   text-align: left;
   box-sizing: border-box;
-  margin-bottom: 16px;
 }
 
 .hotel-card-price {
@@ -871,7 +865,6 @@ html {
   line-height: 21px;
   text-align: right;
   box-sizing: border-box;
-  margin-bottom: 16px;
 }
 
 .four-stars {
@@ -893,6 +886,9 @@ html {
 }
 
 .hotel-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: PT Sans;
   font-size: 16px;
   font-weight: 700;
@@ -912,12 +908,24 @@ html {
   background-color: rgba(130, 179, 211, 1);
 }
 
-/*не добавилось */
-
-.hotel-card-button.rating {
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   background-color: rgba(242, 242, 242, 1);
   font-weight: 400;
   color: rgba(51, 51, 51, 1);
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  width: 140px;
+  height: 36px;
+  text-transform: uppercase;
 }
 
 /* pagination */
@@ -963,6 +971,22 @@ html {
   background-color: rgba(242, 242, 242, 1);
   color: #000000;
 }
+.pagination-link.pagination-current:disabled {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.pagination-link.pagination-current:hover {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.pagination-link.pagination-current:focus {
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.pagination-link.pagination-current:active {
+  background-color: rgba(242, 242, 242, 1);
+}
+
 
 
 .pagination-link.white {
@@ -970,4 +994,138 @@ html {
   color: #000000;
 }
 
-/*как убрать в subscription background? дать доп класс или сделать этот главным а на главной дополнительным с фото?*/
+.pagination-link:disabled {
+  background: rgba(130, 179, 211, 1);
+
+}
+
+.pagination-link:hover {
+  border: 1px solid;
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.pagination-link:focus {
+  border: 1px solid;
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.pagination-link:active {
+  background-color: rgba(130, 179, 211, 1);
+
+}
+
+.button:hover {
+  background-color: #814b18;
+}
+
+.button:focus {
+  outline: 2px solid #dbb590;
+  background-color: #4e2e0e;
+}
+
+.button:disabled {
+  color: #e7e7e7;
+  background-color: #595959;
+}
+
+.button:disabled:hover {
+  background-color: #595959;
+  outline: none;
+  cursor: default;
+}
+
+.contacts-phone:disabled {
+  color: rgba(0, 0, 0, 1);
+}
+
+.contacts-phone:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.svg-htmlacademy:disabled {
+  color: rgba(0, 0, 0, 1);
+}
+
+.svg-htmlacademy:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.svg-htmlacademy:focus {
+ color: rgba(117, 97, 87, 1);
+}
+
+.svg-htmlacademy:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.breadcrumbs-item-header {
+
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 4px;
+  background-color: #ffffff;
+  content: "";
+}
+
+
+.social:disabled {
+  color: rgba(131, 179, 211, 1);
+}
+
+.social:hover {
+  color: rgba(104, 162, 202, 1);
+}
+
+.social:focus {
+  color: rgba(104, 162, 202, 1);
+}
+
+.social:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.select-control:hover {
+  border: 2px solid rgba(229, 229, 229, 1);
+}
+
+.select-control:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
+}
+
+.select-control:active {
+  border: 2px solid rgba(104, 162, 202, 1);
+}
+
+.select-control:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.options-view:disabled {
+  border: 2px solid rgba(229, 229, 229, 1);
+}
+
+.options-view:hover {
+border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.options-view:focus {
+  border: 2px solid
+  color: rgba(104, 162, 202, 1);
+}
+
+.options-view:active {
+  border: 2px solid rgba(0, 0, 0, 1);
+}

@@ -55,7 +55,7 @@
         <div class="page-container inner">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <header class="inner-header">
-            <ul class="breadcrumbs">
+            <ul class="breadcrumbs list-reset">
               <li class="breadcrumbs-item-header">
                 <a class="breadcrumbs-link visually-hidden" href="index.html">
                   <span class="visually-hidden">Главная</span>
@@ -74,7 +74,7 @@
             </ul>
 
             <h2 class="catalog-hotels visually-hidden"> Фильтр гостиниц</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filter list-reset" action="https://echo.htmlacademy.ru/" method="get">
               <div class="wrapper">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -156,9 +156,9 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
             <div class="options-search">
-              <a href="#" class="options-button options-button-current">
+              <a class="options-button options-button-current" href="#">
                 <span class="visually-hidden">Показать карточки</span>
-                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="options-view" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_101112_169)">
                     <path d="M4 0H0V6H4V0Z" fill="black" />
                     <path d="M16 0H12V6H16V0Z" fill="black" />
@@ -176,14 +176,14 @@
               </a>
               <a class="options-button" href="#">
                 <span class="visually-hidden">Показать на весь экран</span>
-                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="options-view" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 12H0V14H16V12Z" fill="black" />
                   <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
                 </svg>
               </a>
               <a class="options-button" href="#">
                 <span class="visually-hidden">Показать список</span>
-                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="options-view" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 0H0V2H2V0Z" fill="black" />
                   <path d="M16 0H4V2H16V0Z" fill="black" />
                   <path d="M2 4H0V6H2V4Z" fill="black" />
@@ -216,7 +216,7 @@
               </div>
               <div class="product-row">
                 <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
-                <p class="hotel-card-button rating">Рейтинг: 8,5</p>
+                <p class="hotel-rating">Рейтинг: 8,5</p>
               </div>
             </li>
 
@@ -300,14 +300,13 @@
 
 
         <section class="subscription">
-          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscriber-email" id="subscription-email"
               required>
-            <button class="button subscription-button" type="submit">Подписаться</button>
-
-          </form>
+             <button class="button subscription-button" type="submit">Подписаться</button>
+           </form>
         </section>
       </main>
 
