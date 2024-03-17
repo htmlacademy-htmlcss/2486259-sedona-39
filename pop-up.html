@@ -80,7 +80,7 @@
                     <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                   </div>
                   <figure class="advantages-item-picture">
-                    <img class="advantages-photo-item" src="images/restorant.jpg" width="800" height="385">
+                    <img class="advantages-photo-item" src="images/restorant.jpg" width="800" height="385" alt="Ресторан в Седоне">
                   </figure>
                 </li>
                 <li class="advantages-item advantages-item-light">
@@ -250,64 +250,62 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="wrapper-dates">
-               <label class="search-form from" for="search-date-from">
+              <label class="search-form from" for="search-date-from">
                 <span class="search-text">Дата заезда:</span>
-               </label>
-               <div class="search-form-container date-from">
-                 <input class="controls-modal modal-date-from"
-                 id="modal-date-from" name="modal-date-from" type="text" value="27 апреля 2020" min="2023-08-31"
-                 placeholder="Заезд">
-                 <span class="date-from-error">Мы не можем отправить вас в прошлое.</span>
-               </div>
+              </label>
+              <div class="search-form-container date-from">
+                <input class="controls-modal modal-date-from" id="search-date-from" name="modal-date-from" type="text"
+                  value="27 апреля 2020" min="2023-08-31" placeholder="Заезд">
+                <span class="date-from-error">Мы не можем отправить вас в прошлое.</span>
               </div>
-              <div class="wrapper-dates">
-                <label class="search-form to" for="search-date-to">
-                 <span class="search-text">Дата выезда:</span>
-                 </label>
-                <div class="search-form-container date-to">
-                 <input class="controls-modal modal-date-to"
-                 id="modal-date-to" name="modal-date-to" type="text" value="1 сентября 2023" min="2023-08-31"
-                 placeholder="Выезд">
-                 <span class="date-to-success">На эти даты есть свободные номера. Пока есть.</span>
-               </div>
+            </div>
+            <div class="wrapper-dates">
+              <label class="search-form to" for="search-date-to">
+                <span class="search-text">Дата выезда:</span>
+              </label>
+              <div class="search-form-container date-to">
+                <input class="controls-modal modal-date-to" id="search-date-to" name="modal-date-to" type="text"
+                  value="1 сентября 2023" min="2023-08-31" placeholder="Выезд">
+                <span class="date-to-success">На эти даты есть свободные номера. Пока есть.</span>
               </div>
-              <div class="wrapper-people">
-                <div class="adults-wrapper">
-                  <label class="adults-check" for="check">
-                   <span class="adults-text">Взрослые:</span>
-                  </label>
-                  <div class="container-check adults">
-                    <button class="modal-count" type="button">
-                    </button>
-                    <input class="input-adults" id="check-count-adults"
-                   name="count-adults" type="text" value="2" min="1">
-                    <button class="modal-count plus" type="button">
-                    </button>
-                  </div>
+            </div>
+            <div class="wrapper-people">
+              <div class="adults-wrapper">
+                <label class="adults-check" for="check-adults">
+                  <span class="adults-text">Взрослые:</span>
+                </label>
+                <div class="container-check adults">
+                  <button class="modal-count" type="button">
+                  </button>
+                  <input class="input-adults" id="check-adults" name="count-adults" type="number" value="2" min="1">
+                  <button class="modal-count plus" type="button">
+                  </button>
                 </div>
-                <div class="children-wrapper">
-                  <label class="children-check" for="check">
-                   <span class="children-text">Дети:</span>
-                   <span class="information-window">
-                    <span class="visually-hidden">Информация</span>
-                    <span class="modal-popover">
+              </div>
+              <div class="children-wrapper">
+                <label class="children-check" for="check-children">
+                  <span class="children-text">Дети:</span>
+                </label>
+                  <span class="information-window"></span>
+                  <span class="visually-hidden">Информация</span>
+                  <span class="modal-popover"></span>
                     <span class="modal-popover-information" role="tooltip" id="tooltip-information">
-                   Укажите количество детей,которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                    </span>
-                  </label>
-                  <div class="container-check children">
-                   <button class="modal-count" type="button">
-                   </button>
-                   <input class="input-children" id="check-count-children"
-                   name="count-children" type="text" value="2" min="0">
-                   <button class="modal-count plus" type="button"></button>
-                  </div>
+                      Укажите количество детей,которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                      размещаются бесплатно.</span>
+                <div class="container-check children">
+                  <button class="modal-count" type="button">
+                  </button>
+                  <input class="input-children" id="check-children" name="count-children" type="number" value="2"
+                    min="0">
+                  <button class="modal-count plus" type="button"></button>
                 </div>
               </div>
+            </div>
             <button class="modal-submit" type="submit">Найти</button>
           </form>
         </section>
-      </div>
+     </div>
+   </div>
   </body>
 
 </html>

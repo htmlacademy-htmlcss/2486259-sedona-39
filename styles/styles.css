@@ -25,6 +25,7 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   font-weight: 400;
+  min-width: 1280px;
 }
 
 .container {
@@ -50,7 +51,8 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -59,6 +61,11 @@ html {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* header */
@@ -113,7 +120,6 @@ html {
 .navigation-link {
   display: block;
   padding: 20px 16px;
-  /**/
   flex-wrap: wrap;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
@@ -345,7 +351,7 @@ text-align: center;
   padding-top: 51px;
   padding-bottom: 82px;
   margin: 0 auto;
-} /* replace smwhere*/
+}
 
 /* services */
 .services-list {
@@ -409,7 +415,6 @@ text-align: center;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  /*padding-top: 64px;*/
   text-transform: uppercase;
 }
 
@@ -938,7 +943,9 @@ left: -16px;
 .min-price-label,
 .max-price-label {
   position: relative;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .min-price-label {
@@ -993,12 +1000,16 @@ left: -16px;
 
 .min-price {
   border-radius: 4px 0px 0px 4px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .max-price {
   border-radius: 0px 4px 4px 0px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .range-scale {
@@ -1057,7 +1068,9 @@ left: -16px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   text-align: left;
 }
 
@@ -1074,7 +1087,9 @@ left: -16px;
 }
 
 .control-input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 
 }
 
@@ -1400,8 +1415,8 @@ border: 2px solid rgba(0, 0, 0, 1);
 }
 
 .options-button:focus {
-  border: 2px solid
-  color: rgba(104, 162, 202, 1);
+  border: 2px solid;
+  color: rgba(104, 162, 202, 1)
 }
 
 .options-button:active {
@@ -1702,8 +1717,7 @@ line-height: 20px;
 text-align: left;
 color: rgba(255, 255, 255, 1);
 }
-<!-- -->
+
 .information-window {
   position: relative;
-
 }
