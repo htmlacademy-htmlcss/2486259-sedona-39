@@ -1,4 +1,4 @@
-/*Стили для всех страниц*/
+/* Стили для всех страниц */
 
 @font-face {
   font-family: "PT Sans";
@@ -66,6 +66,7 @@ html {
 }
 
 /* buttons */
+
 .button {
   display: block;
   margin: 0;
@@ -77,6 +78,7 @@ html {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
   border: none;
   cursor: pointer;
 }
@@ -176,7 +178,7 @@ html {
 }
 
 .options-button.options-button-current {
-  border: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid #000000;
 }
 
 .button-filter {
@@ -351,6 +353,7 @@ html {
 
 .navigation-link.current {
   position: relative;
+  box-sizing: border-box;
 }
 
 .navigation-link.current::after {
@@ -366,6 +369,7 @@ html {
 
 .navigation-link:hover,
 .navigation-link:focus {
+  box-sizing: border-box;
   border: 2px solid #68A2CA;
 }
 
@@ -396,16 +400,18 @@ html {
 .navigation-link-search:hover,
 .navigation-link-search:focus {
   border: 2px solid #68A2CA;
+  box-sizing: border-box;
 }
 
 .navigation-image-likes {
   position:relative;
-  padding: 22px 12px 22px 12px;
+  padding: 22px 12px;
 }
 
 .navigation-link-likes:hover,
 .navigation-link-likes:focus {
   border: 2px solid #68A2CA;
+  box-sizing: border-box;
 }
 
 .navigation-link-likes {
@@ -468,7 +474,7 @@ html {
 
 .advantages-title {
   margin: 0;
-  padding-bottom: 25px;
+  padding: 0 20px 25px 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -627,8 +633,8 @@ html {
 }
 
 .services-title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  padding: 0 20px;
   font-family: inherit;
   font-size: 30px;
   line-height: 36px;
@@ -761,7 +767,7 @@ html {
   width: 452px;
   height: 52px;
   margin: 0;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 20px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
@@ -939,7 +945,7 @@ html {
   background-position: center top;
 }
 
-.breadcrumbs-item:last-child:after {
+.breadcrumbs-item:last-child::after {
   display: none;
 }
 
@@ -1168,12 +1174,14 @@ html {
 .min-price:hover,
 .max-price:hover {
   background-color: #E6E6E6;
+  box-sizing: border-box;
 }
 
 .min-price:focus,
 .max-price:focus {
   background-color: #E6E6E6;
-  border: 3px solid #83B3D3
+  border: 3px solid #83B3D3;
+  box-sizing: border-box;
 }
 
 .max-price {
@@ -1253,7 +1261,7 @@ html {
   justify-content: center;
   width: 191px;
   margin-bottom: 32px;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 50px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -1344,7 +1352,7 @@ html {
   min-height: 49px;
   margin: 0;
   margin-left: 200px;
-  padding: 14px 20px 14px 20px;
+  padding: 14px 20px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
@@ -1616,8 +1624,9 @@ html {
 
 .modal-container {
   position: fixed;
-  top: 0;
+  top: -11px;
   left: 0;
+  z-index: 9999;
   display: flex;
   width: 100%;
   height: 100%;
@@ -1714,7 +1723,7 @@ html {
   box-sizing: border-box;
   width: 577px;
   height: 60px;
-  padding: 18px 77px 18px 77px;
+  padding: 18px 77px;
   background-color: #83b3d3;
   font-family: inherit;
   font-size: 20px;
@@ -1795,8 +1804,7 @@ html {
 }
 
 .date-from-error {
-  margin: 4px 0 0 0;
-  padding-right: 120px;
+  margin: 4px 80px 0 0;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -1805,8 +1813,7 @@ html {
 }
 
 .date-to-success {
-  margin: 4px 0 0 0;
-  padding-right: 70px;
+  margin: 4px 20px 0 0;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -1829,19 +1836,24 @@ html {
   padding: 14px 10px;
   background-color: #F2F2F2;
   border: none;
+  cursor: pointer;
+}
+
+.modal-count svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .modal-count svg:focus  {
-  color: #000000;
+  fill: #000000;
   border: 3px solid #82B3D3;
 }
 
 .modal-count svg:hover {
-  color: #000000;
+  fill: #000000;
 }
 
 .modal-count svg:active {
-  color: rgba(117, 97, 87, 0.3);
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .children-text {
@@ -1921,12 +1933,12 @@ html {
 
 .modal-popover {
   position: absolute;
-  top: 41px;
+  top: 25px;
   left: -56px;
   display: none;
   box-sizing: border-box;
   width: 256px;
-  height: 143px;
+  min-height: 143px;
   padding: 15px 18px 18px 22px;
   background-color: #333333;
   border-radius: 10px;
@@ -1936,9 +1948,7 @@ html {
 .modal-popover-information {
   font-family: inherit;
   font-size: 16px;
-  font-weight: 400;
   line-height: 20px;
-  text-align: left;
   color: #ffffff;
 }
 
@@ -1967,15 +1977,12 @@ html {
 
 .modal-popover::before {
   position: absolute;
-  bottom: 100%;
-  left: 0;
+  bottom: 25px;
   right: 0;
   width: 19px;
   height: 9px;
-  margin-left: auto;
-  margin-right: auto;
   content: "";
-  background-image: url("../img/triangle.svg");
+  background-image: url("../images/triangle.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
