@@ -267,7 +267,7 @@ html {
   position: absolute;
   top: 64px;
   right: 52px;
-  width: 56px;
+  width: 52px;
   height: 52px;
   padding: 0;
   background-color: #f2f2f2;
@@ -783,27 +783,26 @@ html {
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 400;
   text-align: left;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
-  border: 3px solid #f2f2f2;
+  border: 2px solid #f2f2f2;
 }
 
 .field:hover {
   background-color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 
-.field:focus {
+.field:focus,
+.field:active {
   border-color: #83b3d3;
 }
 
-.field:active {
-  border: 2px solid #83b3d3;
-}
-
 .field:disabled {
-  border: 2px solid #0000004d;
+  color: #0000004d;
+  border-color: #0000004d;
 }
 
 /* footer (main + inner page) */
@@ -1007,11 +1006,11 @@ html {
 }
 
 .control:hover {
-  color: rgba(255, 255, 255, 0.6);
+  opacity: 60%;
 }
 
 .control:active {
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 30%;
 }
 
 .wrapper {
@@ -1044,6 +1043,7 @@ html {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  border: 3px solid #ffffff;
 }
 
 .control:hover + .control-mark {
@@ -1288,12 +1288,6 @@ html {
   cursor: pointer;
 }
 
-.filter-passive {
-  background-color: transparent;
-  margin: 0;
-  border: none;
-}
-
 .filter:hover,
 .filter:focus {
   background-color: #68a2ca;
@@ -1309,6 +1303,12 @@ html {
   background-color: #e5e5e5;
 }
 
+.filter-passive {
+  background-color: transparent;
+  margin: 0;
+  border: 3px solid transparent;
+}
+
 .filter-passive:hover {
   color: #ffffff;
   background-color: transparent;
@@ -1317,7 +1317,7 @@ html {
 .filter-passive:focus {
   color: #ffffff;
   background-color: transparent;
-  border: 3px solid #83b3d3;
+  border-color: #83b3d3;
 }
 
 .filter-passive:active {
@@ -1822,7 +1822,9 @@ html {
 }
 
 .date-from-error {
-  margin: 4px 117px 0 0;
+  margin: 0;
+  padding: 4px 135px 0 20px;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -1831,7 +1833,9 @@ html {
 }
 
 .date-to-success {
-  margin: 4px 65px 0 0;
+  max-width: 335px;
+  margin: 0;
+  padding: 4px 65px 0 0;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
