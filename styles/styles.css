@@ -1051,11 +1051,16 @@ html {
 }
 
 .control-mark:focus {
-  border: 3px solid #83b3d3;
+  border-color: #83b3d3;
 }
 
 .control-input:disabled + .control-mark {
   border-color: #242424;
+}
+
+.control-input:focus-visible + .control-mark,
+.control-input:focus-visible + .control-input-text {
+  outline: 3px solid #83b3d3;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before,
@@ -1112,6 +1117,7 @@ html {
   color: #ffffff;
   border: none;
 }
+
 .min-price-label,
 .max-price-label {
   position: relative;
