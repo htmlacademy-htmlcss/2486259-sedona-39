@@ -232,7 +232,7 @@
               </label>
               <div class="search-form-container date-from">
                 <div class="wrapper-modal-container">
-                  <input class="controls-modal modal-date-from" id="search-date-from" name="modal-date-from" type="text"
+                  <input class="controls-modal modal-date-from" id="search-date-from" name="modal-date-from" type="text" value="27 апреля 2020" min="2023-03-06"
                     placeholder="Укажите дату" required>
                 </div>
                 <p class="date-from-error">Мы не можем отправить вас в прошлое.</p>
@@ -244,7 +244,7 @@
               </label>
               <div class="search-form-container date-to">
                 <div class="wrapper-modal-container">
-                  <input class="controls-modal modal-date-to" id="search-date-to" name="modal-date-to" type="text"
+                  <input class="controls-modal modal-date-to" id="search-date-to" name="modal-date-to" type="text" value="1 сентября 2023" min="2023-03-06"
                     placeholder="Укажите дату">
                 </div>
                 <p class="date-to-success">На эти даты есть свободные номера. Пока есть.</p>
@@ -257,12 +257,14 @@
                 </label>
                 <div class="container-check adults">
                   <button class="modal-count" type="button">
-                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span class="visually-hidden">Меньше взрослых</span>
+                    <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0L0 2L14 2V0L0 0Z" />
                     </svg>
                   </button>
-                  <input class="input-adults" id="check-adults" name="count-adults" type="text">
+                  <input class="input-adults" id="check-adults" name="count-adults" type="number" value="2" required>
                   <button class="modal-count" type="button">
+                    <span class="visually-hidden">Больше взрослых</span>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
                     </svg>
@@ -272,26 +274,28 @@
               <div class="form-row">
                 <label class="children-check" for="check-children">
                   <span class="children-text">Дети:</span>
-                  <span class="tooltip">
-                    <span class="tooltip-icon">
+                </label>
+                <div class="tooltip">
+                    <button class="tooltip-icon">
                       <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
                       </svg>
-                    </span>
+                    </button>
                     <span class="tooltip-body">
                       Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
                       размещаются бесплатно.
                     </span>
-                  </span>
-                </label>
+                </div>
                 <div class="container-check children">
                   <button class="modal-count" type="button">
-                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span class="visually-hidden">Меньше детей</span>
+                    <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0L0 2L14 2V0L0 0Z" />
                     </svg>
                   </button>
-                  <input class="input-children" id="check-children" name="count-children" type="text">
+                  <input class="input-children" id="check-children" name="count-children" type="number" value="2">
                   <button class="modal-count" type="button">
+                    <span class="visually-hidden">Больше детей</span>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
                     </svg>
