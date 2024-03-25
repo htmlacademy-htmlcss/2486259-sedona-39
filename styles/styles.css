@@ -843,9 +843,8 @@ html {
 }
 
 .social-youtube {
-  margin-left: 5px;
   margin-top: 1px;
-  padding: 0;
+  padding-left: 5px;
 }
 
 .social-telegram {
@@ -1248,14 +1247,12 @@ html {
 .max-price:hover {
   background-color: #e6e6e6;
   border-color: #e6e6e6;
-  box-sizing: border-box;
 }
 
 .min-price:focus,
 .max-price:focus {
   background-color: #e6e6e6;
   border-color: #83b3d3;
-  box-sizing: border-box;
 }
 
 .min-price:disabled,
@@ -1383,7 +1380,8 @@ html {
   background-color: transparent;
 }
 
-.filter-passive:focus {
+.filter-passive:focus,
+.filter-passive:focus-visible {
   color: #ffffff;
   background-color: transparent;
   border-color: #83b3d3;
