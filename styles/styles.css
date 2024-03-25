@@ -1137,8 +1137,8 @@ html {
 
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 20%;
-  left: 17%;
+  top: 17%;
+  left: 15%;
   width: 10px;
   height: 10px;
   background-color: #3f5e72;
@@ -1247,13 +1247,14 @@ html {
 .min-price:hover,
 .max-price:hover {
   background-color: #e6e6e6;
+  border-color: #e6e6e6;
   box-sizing: border-box;
 }
 
 .min-price:focus,
 .max-price:focus {
   background-color: #e6e6e6;
-  border-color: 3px solid #83b3d3;
+  border-color: #83b3d3;
   box-sizing: border-box;
 }
 
