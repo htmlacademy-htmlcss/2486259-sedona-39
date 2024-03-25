@@ -68,9 +68,8 @@
                   <span class="visually-hidden">Главная</span>
                   <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z"
-                      fill="white" />
-                    <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white" />
+                      d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" />
+                    <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" />
                   </svg>
                 </a>
 
@@ -147,10 +146,10 @@
                   <legend class="price-title">Стоимость, ₽:</legend>
                   <div class="range">
                     <div class="range-wrapper-inputs">
-                      <label class="min-price-label"><input class="range-input min-price" type="text"
+                      <label class="min-price-label"><input class="range-input min-price" type="number" value="0"
                           name="min-price"><span class="visually-hidden">Минимальное значение</span>
                       </label>
-                      <label class="max-price-label"><input class="range-input max-price" type="text"
+                      <label class="max-price-label"><input class="range-input max-price" type="number" value="9000"
                           name="max-price"><span class="visually-hidden">Максимальное значение</span>
                       </label>
                     </div>
@@ -166,10 +165,10 @@
                     </div>
                   </div>
                 </fieldset>
-                <section class="wrapper-filter-buttons">
+                <div class="wrapper-filter-buttons">
                   <button class="filter" type="submit">Применить</button>
                   <button class="filter filter-passive" type="reset">Сбросить</button>
-                </section>
+                </div>
               </div>
             </form>
           </header>
@@ -245,7 +244,7 @@
                 <button class="hotel-card-button favorites" type="button">В избранное</button>
               </div>
               <div class="product-row">
-                <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
+                <span class="hotel-stars four-stars"></span>
                 <p class="hotel-rating">Рейтинг: 8,5</p>
               </div>
             </li>
@@ -267,7 +266,7 @@
                 <button class="hotel-card-button in-favorites" type="button">В избранном</button>
               </div>
               <div class="product-row">
-                <img class="hotel-stars four-stars" src="images/stars-4.svg" width="72" height="68" alt="четыре звезды">
+                <span class="hotel-stars four-stars"></span>
                 <p class="hotel-rating">Рейтинг: 9,2</p>
               </div>
             </li>
@@ -289,7 +288,7 @@
                 <button class="hotel-card-button favorites" type="button">В избранное</button>
               </div>
               <div class="product-row">
-                <img class="hotel-stars three-stars" src="images/stars-3.svg" width="54" height="51" alt="три звезды">
+                <span class="hotel-stars three-stars"></span>
                 <p class="hotel-rating">Рейтинг: 6,9</p>
               </div>
             </li>
@@ -311,7 +310,7 @@
                 <button class="hotel-card-button favorites" type="button">В избранное</button>
               </div>
               <div class="product-row">
-                <img class="hotel-stars two-stars" src="images/stars-2.svg" width="36" height="34" alt="две звезды">
+                <span class="hotel-stars two-stars"></span>
                 <p class="hotel-rating">Рейтинг: 5,0</p>
               </div>
             </li>
@@ -345,6 +344,7 @@
           <p class="subscription-description hotels-subscription">Только полезная информация и никакого спама,
             честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscription-email">Укажите ваш email</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscriber-email" id="subscription-email"
               required>
             <button class="button subscription-button" type="submit">Подписаться</button>
@@ -372,7 +372,7 @@
           <li class="social-item">
             <a class="social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
-              <svg class="social" width="18" height="16" viewBox="0 0 18 16" fill="none"
+              <svg class="social social-telegram" width="18" height="16" viewBox="0 0 18 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16.785 0.955705L0.840489 7.1042C-0.247661 7.54126 -0.241365 8.14828 0.640845 8.41897L4.73445 9.69597L14.2058 3.72014C14.6537 3.44766 15.0629 3.59424 14.7265 3.89281L7.05283 10.8183H7.05103L7.05283 10.8192L6.77045 15.0387C7.18413 15.0387 7.36669 14.8489 7.59871 14.625L9.58705 12.6915L13.7229 15.7464C14.4855 16.1664 15.0332 15.9506 15.2229 15.0405L17.9379 2.2453C18.2158 1.13107 17.5126 0.626562 16.785 0.955705Z" />
@@ -383,7 +383,7 @@
           <li class="social-item">
             <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
-              <svg class="social" width="23" height="18" viewBox="0 0 23 18" fill="none"
+              <svg class="social social-youtube" width="23" height="18" viewBox="0 0 23 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M18.9402 0.356445H3.50738C1.64668 0.356445 0.333252 1.9502 0.333252 3.75645V13.8502C0.333252 15.7627 1.64668 17.3564 3.50738 17.3564H19.1591C20.8009 17.3564 22.3333 15.7627 22.3333 13.9564V3.75645C22.1143 1.9502 20.8009 0.356445 18.9402 0.356445ZM7.99494 12.8939V4.81894L15.3283 8.85645L7.99494 12.8939Z" />
